@@ -4,16 +4,14 @@ const countryReducer  = (state = {}, action) => {
     switch(action.type) {
         case 'FETCH_ALL':
             return {
-                ...state,
-                isLoading: true
+                ...state
             };
         case 'RECEIVED_ALL':
             console.log(action.allCountries);
             return {
                 ...state,
                 countries: action.allCountries,
-                regions: action.regions,
-                isLoading: false
+                regions: action.regions
             }
         default:
             return state;
