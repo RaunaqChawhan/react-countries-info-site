@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Loading from './containers/Loading';
+// import Button from './containers/Button';
+import CountryList from './containers/CountryList';
+import CountrySearch from './containers/CountrySearch';
+import SelectRegion from './containers/SelectRegion';
+import { Switch, Route } from 'react-router-dom';
+import DetailedInfo from './containers/DetailedInfo';
+import Header from './containers/Header';
+
+// function App() {
+//   return (
+//     <div className='App'>
+//       <CountrySearch />
+//       <SelectRegion />
+//       {/* <Button /> */}
+//       <CountryList />
+//       <Loading />
+//     </div>
+//   )
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="countries-app">
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <main className="main-panel">
+            <nav className="selection-criteria">
+              <CountrySearch />
+              <SelectRegion />
+            </nav>
+            {/* <Button /> */}
+            <CountryList />
+            {/* <Loading /> */}
+          </main>
+        </Route>
+        <Route path="/:country" component={DetailedInfo} />
+      </Switch>
+      
     </div>
-  );
+  )
 }
 
 export default App;
