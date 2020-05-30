@@ -32,7 +32,7 @@ const DetailedInfo = ({match, countries}) => {
                 <h1>{name}</h1>
                 <ul>
                     <li><span>Native Name:</span> {nativeName}</li>
-                    <li><span>Population:</span> {population}</li>
+                    <li><span>Population:</span> {population.toLocaleString()}</li>
                     <li><span>Region:</span> {region}</li>
                     <li><span>Sub Region:</span> {subregion}</li>
                     <li><span>Capital:</span> {capital}</li>
