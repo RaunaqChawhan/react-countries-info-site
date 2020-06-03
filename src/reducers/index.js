@@ -7,7 +7,7 @@ const countryReducer  = (state = {}, action) => {
                 ...state
             };
         case 'RECEIVED_ALL':
-            console.log(action.allCountries);
+            // console.log(action.allCountries);
             return {
                 ...state,
                 countries: action.allCountries,

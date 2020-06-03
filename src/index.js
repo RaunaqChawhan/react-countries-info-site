@@ -8,13 +8,14 @@ import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
 import App from './App';
 import './index.css';
+import { fetchAll } from './actions';
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(rootSaga);
 
-store.dispatch({type: 'FETCH_ALL'})
+store.dispatch(fetchAll());
 
 ReactDOM.render(
   <React.StrictMode>
