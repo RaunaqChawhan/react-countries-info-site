@@ -280,19 +280,19 @@ html body.mode-toggle, .mode-toggle .countries-app {
 .country-details {
   margin-left: 24px;
   margin-right: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .details h2 {
   font-size: 16px;
   margin: 0 24px;
-  margin-top: 25px;
+  margin-top: 22px;
   margin-bottom: 22px;
   letter-spacing: 0.1px;
 }
 
 .country-details p {
-  margin: 12px 0;
+  margin: 4px 0;
   letter-spacing: 0.1px;
 }
 

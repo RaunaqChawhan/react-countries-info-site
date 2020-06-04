@@ -4,9 +4,9 @@ import Country from './Country';
 
 const CountryList = ({ countries }) => (
     countries ?
-    <section className="countries-container">
+    <article className="countries-container">
         {countries.map(country => <Country key={country.name} {...country} />) }
-    </section> :
+    </article> :
     null
 )
 
