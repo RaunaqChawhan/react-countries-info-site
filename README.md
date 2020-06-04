@@ -1,5 +1,7 @@
 ## A react app displaying countries info
 
+### This project is created as part of [Frontend Mentor](https://www.frontendmentor.io/) REST Countries API with color theme switcher challenge
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
