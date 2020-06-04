@@ -9,7 +9,7 @@ const Country = ({ flag, name, population, region, capital }) => (
                         <img src={flag} alt={`${name} flag`} />
                     </div>
                     
-                    <h1>{name}</h1>
+                    <h2>{name}</h2>
                     <div className="country-details">
                         <p><span>Population:</span> {population.toLocaleString()}</p>
                         <p><span>Region:</span> {region}</p>

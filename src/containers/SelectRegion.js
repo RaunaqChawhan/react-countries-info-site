@@ -17,7 +17,7 @@ const SelectRegion = ({ regions, setSearchCategory }) => {
                 <option value="filter" disabled hidden>Filter by Region</option>
                 {regions ? 
                     regions.map(
-                    region => <option key={region} name={region}>{region}</option>
+                    region => <option key={region} value={region}>{region}</option>
                 ) :
                 null}
             </select>
