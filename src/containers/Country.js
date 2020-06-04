@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Country = ({ flag, name, population, region, capital }) => (
         <article className="country-card">
-            <Link to={`/${name}`}>
+            <Link to={`/${name.toLowerCase().split("(", 1).toString().trim().split(" ").join("-")}`}>
                 <div className="details">
                     <div>
                         <img src={flag} alt={`${name} flag`} />

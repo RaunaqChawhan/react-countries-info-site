@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const DetailedInfo = ({match, countries}) => {
 
-    const [ filteredCountryDetails ] = countries ? countries.filter(country => country.name === match.params.country) : [];
+    const [ filteredCountryDetails ] = countries ? countries.filter(country => country.name.toLowerCase().startsWith(match.params.country.split("-").join(" "))) : [];
 
     const { flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders } = filteredCountryDetails ? filteredCountryDetails : {};
 
@@ -44,7 +44,7 @@ const DetailedInfo = ({match, countries}) => {
                     <span>Border Countries: </span>
                     <div className="border-countries-button">
                         {borderCountries ? borderCountries.map(borderCountry => 
-                        <Link key={borderCountry.name} to={`/${borderCountry.name}`}>
+                        <Link key={borderCountry.name} to={`/${borderCountry.name.toLowerCase().split("(", 1).toString().trim().split(" ").join("-")}`}>
                             <button type="button" >{borderCountry.name}</button>
                         </Link>
                         ) : ' '}
